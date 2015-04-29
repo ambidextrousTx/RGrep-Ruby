@@ -1,13 +1,16 @@
 require 'spec_helper'
 
 describe RGrep do
-  before :each do
+  # This is executed once before all tests
+  before :all do
+    # Instance variable accessible everywhere
     @rgrep = RGrep.new
   end
-end
 
-describe '#new' do
-  it 'takes no parameters and returns an instance of RGrep' do
-    @rgrep.should be nil
+  describe '#new' do
+    it 'takes no parameters and returns an instance of RGrep' do
+      @rgrep.should be_an_instance_of RGrep
+    end
   end
+
 end
