@@ -13,4 +13,10 @@ describe RGrep do
     end
   end
 
+  describe '#version' do
+    it 'returns the correct version number' do
+      @rgrep.version.should eql 'RGrep (BSD) 0.0.1'
+    end
+  end
+
 end
