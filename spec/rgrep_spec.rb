@@ -19,4 +19,16 @@ describe RGrep do
     end
   end
 
+  describe '#get_match' do
+    it 'returns true for a match' do
+      @rgrep.get_match.should eql true
+    end
+  end
+
+  describe '#get_exact_match' do
+    it 'returns true only for an exact match' do
+      @rgrep.get_exact_match.should eql false
+    end
+  end
+
 end

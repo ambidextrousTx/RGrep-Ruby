@@ -9,4 +9,12 @@ class RGrep
     return 'RGrep (BSD) 0.0.1'
   end
 
+  def get_match
+    return @text.include? @pattern
+  end
+
+  def get_exact_match
+    return @text.eql? @pattern
+  end
+
 end
