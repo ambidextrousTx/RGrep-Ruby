@@ -4,7 +4,7 @@ describe RGrep do
   # This is executed once before all tests
   before :all do
     # Instance variable accessible everywhere
-    @rgrep = RGrep.new
+    @rgrep = RGrep.new({:pattern => 'pattern', :text => "pattern\npattern"})
   end
 
   describe '#new' do
