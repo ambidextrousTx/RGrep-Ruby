@@ -17,4 +17,14 @@ class RGrep
     return @text.eql? @pattern
   end
 
+  def get_quiet_match
+    text = @text.split("\n")
+    for line in text
+      if line.include? @pattern
+        return true
+      end
+    end
+    return false
+  end
+
 end

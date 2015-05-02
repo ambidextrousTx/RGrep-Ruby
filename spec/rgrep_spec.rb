@@ -31,4 +31,10 @@ describe RGrep do
     end
   end
 
+  describe '#get_quiet_match' do
+    it 'returns true as soon as the first match is found' do
+      @rgrep.get_quiet_match.should eql true
+    end
+  end
+
 end
